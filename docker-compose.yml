@@ -7,10 +7,22 @@ services:
       - 5672:5672
       - 15672:15672
       - 15674:15674
-  mongodb:
-    image: mongo:3.6
+  mongo:
+    image: mongo:3.4
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/mongo:/data/db
   redis:
     image: redis:4.0-alpine
+    ports:
+      - 6379:6379
+    volumes:
+      - ./data/redis:/data
   postgres:
     image: postgres:10.3-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
     
