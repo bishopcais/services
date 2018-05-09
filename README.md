@@ -19,5 +19,5 @@ Current Services
 ----------------
 * [RabbitMQ](http://rabbitmq.com): 3.7
 * [Redis](https://redis.io/): 4.0
-* [MongoDB](https://www.mongodb.com/): 3.6
+* [MongoDB](https://www.mongodb.com/): 3.4
 * [PostgreSQL](https://www.postgresql.org/): 10.3
