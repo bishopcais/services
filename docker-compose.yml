@@ -2,6 +2,7 @@ version: '3'
 
 services:
   rabbitmq:
+    restart: always
     build: ./rabbitmq
     ports:
       - 5672:5672
@@ -10,23 +11,19 @@ services:
     volumes:
       - rabbitmq:/var/lib/rabbitmq
   mongo:
+    restart: always
     image: mongo:3.4
     ports:
       - 27017:27017
     volumes:
       - mongo:/data/db
   redis:
+    restart: always
     image: redis:4.0-alpine
     ports:
       - 6379:6379
     volumes:
       - redis:/data
-  crun-server:
-    image: cisl/crun-server:latest
-    ports:
-      - 7777:7777
-    depends_on:
-      - mongo
   #postgres:
   #  image: postgres:10.3-alpine
   #  ports:
