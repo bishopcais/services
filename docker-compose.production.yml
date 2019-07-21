@@ -2,6 +2,7 @@ version: '3'
 
 services:
   rabbitmq:
+    restart: always
     build: ./rabbitmq
     ports:
       - 5672:5672
