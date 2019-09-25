@@ -12,14 +12,14 @@ services:
       - rabbitmq:/var/lib/rabbitmq
   mongo:
     restart: always
-    image: mongo:3.4
+    image: mongo:4.2
     ports:
       - 27017:27017
     volumes:
       - mongo:/data/db
   redis:
     restart: always
-    image: redis:4.0-alpine
+    image: redis:5-alpine
     ports:
       - 6379:6379
     volumes:
