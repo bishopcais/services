@@ -1,4 +1,4 @@
-FROM rabbitmq:3.7-alpine
+FROM rabbitmq:3.8-alpine
 
 RUN rabbitmq-plugins enable rabbitmq_event_exchange \
     && rabbitmq-plugins enable rabbitmq_amqp1_0 \
